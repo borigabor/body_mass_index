@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testtömegindex számítás</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="css/base.css">
+
+</head>
+<body>
+
+    <div class="layout">
+
+        <h3>Testtömegindex számítás megvalósitás 1</h3>
+
+     <form class="input-fields">
+        <table>
+            
+                <tr>
+                    <td>
+                        <div class="table--input-text">Testsúlyod:</div>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="num" id="suly" class="input-field" value="0" onkeyup="szamol(this)">
+                            kg
+                        </label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <div class="table--input-text">Magasságod:</div>    
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" id="magassag" class="input-field" value="0" onkeyup="szamol(this)">
+                            cm
+                         </label>
+                    </td>
+                </tr>
+                <tr id="eredmeny">
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr class="dobule--border-cell">
+                    <td>
+                        <div class="table--input-text">Testtömegindexed:</div>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" id="index" class="input-field">
+                            kg/m²
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="table--input-text">Súlytöbbleted:</div>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" id="tobblet" class="input-field">
+                            kg
+                        </label>
+                    </td>
+                </tr>
+
+        </table>
+    </form>
+
+
+    <h3>Testtömegindex számítás megvalósitás 2</h3>
+
+    <div class="testkep-container">
+        <img src="image/body.jpg" alt="body_correct" id="testkep">
+
+        <form action="" class="input__fields--w-range">
+            <div class="input-wrapper">
+                <div class="range--input-text">Testömeg:</div>
+                <label for="range"> 40...
+                    <input type="range" id="bmi_suly" name="bmi_suly" class="input-range" value="40" min="40" max="200">
+                    ...200
+                </label>
+                <i id="gomb_suly" class="button fa-solid fa-caret-right"></i>
+                <div class="range--input-value"><span id="suly_range">50</span> kg</div>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="range--input-text">Magasság:</div>
+                <label for="range"> 150...
+                    <input type="range" id="bmi_magassag" name="bmi_magassag" class="input-range" value="150" min="150" max="220">
+                    ...220
+                </label>
+                <i id="gomb_magassag" class="button fa-solid fa-caret-right"></i>
+                <div class="range--input-value"><span id="magassag_range">175</span> cm</div>
+            </div>
+
+            <div class="range--input-border"></div>
+
+            <div class="input-wrapper input-result">
+                <div class="range--input-text">BMI:</div>
+                <input type="text" class="input-field" id="bmi" name="bmi">
+                <label for="bmi">kg/m²</label>
+            </div>
+
+        </form>
+
+    </div>
+
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
